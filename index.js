@@ -1,51 +1,22 @@
+var arrNumber = []
 
-
-var NumberArray = []
-// thêm số vào chuỗi (array)
-function addNumber() {
-    var NumberArray=[];
+function addToArray() {
     var numberInput = +document.getElementById("numberInput").value;
-    NumberArray.push(numberInput);
+    arrNumber.push(numberInput);
 
-    document.getElementById("arrayDisplay").innerHTML = NumberArray + ",";
-}
-console.log(NumberArray);
-document.getElementById("addNum").onclick = addNumber;
+    document.getElementById("arrayDisplay").innerHTML = arrNumber + " ";
 
-// xóa số vừa thêm vào
-function removeNumber() {
-    NumberArray.pop();
-    document.getElementById("arrayDisplay").innerHTML = NumberArray;
-}
-document.getElementById("removeNum").onclick = removeNumber;
-
-// #1
-function sumNumber() {
-    let sum = 0;
-    var length = NumberArray.length;
-
-    for (var i = 1; i < length; i++) {
-        
-        var value = NumberArray[i];
-        if (value >= 0) {
-            sum += value;
+    // #1 tổng số dương
+    function sumArray() {
+        let sum = 0;
+        for (var i = 0; i < arrNumber.length; i++) {
+            if (arrNumber[i] > 0) {
+                sum += arrNumber[i];
+            }
         }
-        return sum;
+        document.getElementById("sumArrayResult").innerHTML = sum;
     }
+    document.getElementById("sumArray").onclick = sumArray;
 
-    console.log(sum)
-    document.getElementById("sumArrayResult").innerHTML = sum;
 }
-document.getElementById("sumArray").onclick = sumNumber(NumberArray);
-
-// document.getElementById("sumArray").onclick = function(NumberArray){
-//     var sum = 0;
-//     var length = NumberArray.length;
-//     for(var i=1; i<length; i++){
-//         var value = NumberArray[i];
-//         if(value>=0){
-//             sum += value;
-//         }
-//     }
-//     document.getElementById("sumArrayResult").innerHTML=sum;
-// }
+document.getElementById("addNum").onclick = addToArray;
