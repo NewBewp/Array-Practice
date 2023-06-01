@@ -18,5 +18,18 @@ function addToArray() {
     }
     document.getElementById("sumArray").onclick = sumArray;
 
+    // #2 đếm số dương
+    function coutPositiveNumb() {
+        let cout = 0;
+        for (var i = 0; i < arrNumber.length; i++) {
+            if (arrNumber[i] > 0) {
+                cout++;
+            }
+        }
+        document.getElementById("countArrayResult").innerHTML = cout;
+    }
+    document.getElementById("countArray").onclick = coutPositiveNumb;
+
+    
 }
 document.getElementById("addNum").onclick = addToArray;
