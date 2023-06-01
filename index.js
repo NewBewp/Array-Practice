@@ -45,9 +45,10 @@ function addToArray() {
 
     // #4 tìm số dương nhỏ nhất
     function minPositiveNumb() {
-        let minPositive = 0;
+        // debugger
+        let minPositive = arrNumber[0];
         for (var i = 0; i < arrNumber.length; i++) {
-            if (arrNumber[i] < minPositive && arrNumber[i] >= 0) {
+            if (arrNumber[i] < minPositive && arrNumber[i] > 0 ) {
                 minPositive = arrNumber[i];
             }
         }
@@ -55,6 +56,6 @@ function addToArray() {
     }
     document.getElementById("minPositiveArray").onclick = minPositiveNumb;
 
-    
+
 }
 document.getElementById("addNum").onclick = addToArray;
