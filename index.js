@@ -33,7 +33,7 @@ function addToArray() {
 
     // #3 tìm số nhỏ nhất
     function minNumb() {
-        let min = 0;
+        let min = +arrNumber[0];
         for (var i = 0; i < arrNumber.length; i++) {
             if (arrNumber[i] < min) {
                 min = arrNumber[i];
@@ -46,7 +46,7 @@ function addToArray() {
     // #4 tìm số dương nhỏ nhất
     function minPositiveNumb() {
         // debugger
-        let minPositive = arrNumber[0];
+        let minPositive = +arrNumber[0];
         for (var i = 0; i < arrNumber.length; i++) {
             if (arrNumber[i] < minPositive && arrNumber[i] > 0 ) {
                 minPositive = arrNumber[i];
@@ -56,6 +56,11 @@ function addToArray() {
     }
     document.getElementById("minPositiveArray").onclick = minPositiveNumb;
 
+    // #5 tìm số chẵn cuối cùng
+    // function lastEvenNumb(){
+    //     let lastEven = arrNumber[0];
+    //     for
+    // }
 
 }
 document.getElementById("addNum").onclick = addToArray;
