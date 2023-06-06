@@ -48,7 +48,7 @@ function addToArray() {
         // debugger
         let minPositive = +arrNumber[0];
         for (var i = 0; i < arrNumber.length; i++) {
-            if (arrNumber[i] < minPositive && arrNumber[i] > 0 ) {
+            if (arrNumber[i] < minPositive && arrNumber[i] > 0) {
                 minPositive = arrNumber[i];
             }
         }
@@ -57,10 +57,31 @@ function addToArray() {
     document.getElementById("minPositiveArray").onclick = minPositiveNumb;
 
     // #5 tìm số chẵn cuối cùng
-    // function lastEvenNumb(){
-    //     let lastEven = arrNumber[0];
-    //     for
-    // }
+    function lastEvenNumb() {
+        let lastEven = arrNumber[0];
+        for (var i = 0; i < arrNumber.length; i++) {
+            if (arrNumber[i] % 2 == 0) {
+                lastEven = arrNumber[i];
+            }
+        }
+        // console.log(lastEven);
+        document.getElementById("lastEvenResult").innerHTML = lastEven;
+    }
+    document.getElementById("findLastEven").onclick = lastEvenNumb;
+
+    // #6: Đổi chỗ 
+    function swapPosition() {
+
+        var index1 = +document.getElementById("inputFirstPosition").value;
+        var index2 = +document.getElementById("inputSecondPosition").value;
+
+        var temp = arrNumber[index1];
+        arrNumber[index1] = arrNumber[index2];
+        arrNumber[index2] = temp;
+
+        document.getElementById("afterSwap").innerHTML = arrNumber;
+    }
+    document.getElementById("btnSwap").onclick = swapPosition;
 
 }
 document.getElementById("addNum").onclick = addToArray;

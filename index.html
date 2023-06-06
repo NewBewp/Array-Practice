@@ -21,7 +21,7 @@
             <div class="input">
                 <input type="text" id="numberInput">
                 <button id="addNum">Add number</button>
-                <button id="removeNum">Remove number</button>
+
             </div>
             <div class="output">
                 <p class="border mt-3">👉
@@ -46,7 +46,7 @@
                                 </p>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -74,7 +74,8 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
                             #3: Tìm số nhỏ nhất
                         </button>
                     </h2>
@@ -85,7 +86,7 @@
                                 <button type="submit" id="minArray">Tìm số nhỏ nhất</button>
                             </div>
                             <div class="output">
-                                <p class="border mt-3">👉Số nhỏ nhất: 
+                                <p class="border mt-3">👉Số nhỏ nhất:
                                     <span id="minArrayResult"></span>
                                 </p>
                             </div>
@@ -95,7 +96,8 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
                             #4: Tìm số dương nhỏ nhất
                         </button>
                     </h2>
@@ -106,7 +108,7 @@
                                 <button type="submit" id="minPositiveArray">Tìm số dương nhỏ nhất</button>
                             </div>
                             <div class="output">
-                                <p class="border mt-3">👉Số dương nhỏ nhất: 
+                                <p class="border mt-3">👉Số dương nhỏ nhất:
                                     <span id="minPositiveArrayResult"></span>
                                 </p>
                             </div>
@@ -116,17 +118,48 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
                             #5: Tìm số chẵn cuối cùng
                         </button>
                     </h2>
                     <div id="flush-collapseFive" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
+                        <div class="accordion-body">
+                            <div class="accordion-body">
+                                <button type="submit" id="findLastEven">Tìm số chẵn cuối cùng</button>
+                            </div>
+                            <div class="output">
+                                <p class="border mt-3">👉Số chẵn cuối cùng: 
+                                    <span id="lastEvenResult"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false"
+                            aria-controls="flush-collapseSix">
+                            #6: Đổi chỗ 
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="accordion-body">
+                                <input type="number" id="inputFirstPosition" placeholder="nhập vị trí đầu tiên">
+                                <input type="number" id="inputSecondPosition" placeholder="nhập vị trí thứ hai">
+
+                                <button type="submit" id="btnSwap">Đổi chỗ</button>
+                            </div>
+                            <div class="output">
+                                <p class="border mt-3">👉Mảng sau khi đổi:
+                                    <span id="afterSwap"></span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
