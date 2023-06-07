@@ -83,5 +83,22 @@ function addToArray() {
     }
     document.getElementById("btnSwap").onclick = swapPosition;
 
+    // #7: Sắp xếp tăng dần
+    function sortUp() {        
+        for (var i = 0; i < arrNumber.length-1; i++) {
+            for (var j = i + 1; j < arrNumber.length; j++) {
+                if (arrNumber[i] > arrNumber[j]) {
+                    var temp = arrNumber[i];
+                    arrNumber[i] = arrNumber[j];
+                    arrNumber[j] = temp;
+                }
+            }
+        }
+        document.querySelector("#afterSort").innerHTML = arrNumber;
+
+    }
+    document.getElementById("btnSort").onclick = sortUp;
+
+
 }
 document.getElementById("addNum").onclick = addToArray;
