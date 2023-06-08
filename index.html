@@ -19,7 +19,7 @@
         <div class="container">
             <h1 class="text-center">Array</h1>
             <div class="input">
-                <input type="text" id="numberInput">
+                <input type="number" id="numberInput">
                 <button id="addNum">Add number</button>
 
             </div>
@@ -178,6 +178,82 @@
                             <div class="output">
                                 <p class="border mt-3">👉Mảng sau khi sắp xếp:
                                     <span id="afterSort"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseEight" aria-expanded="false"
+                            aria-controls="flush-collapseEight">
+                            #8: Tìm số nguyên tố đầu tiên
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEight" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="accordion-body">
+                                <button type="submit" id="btnFindPrime">Tìm số nguyên tố</button>
+                            </div>
+                            <div class="output">
+                                <p class="border mt-3">👉
+                                    <span id="resultPrime"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseNine" aria-expanded="false"
+                            aria-controls="flush-collapseNine">
+                            #9: Đếm số nguyên
+                        </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="accordion-body">
+                                <input type="number" id="numberIntegerInput">
+                                <button type="submit" id="btnNumberInteger">Thêm số nguyên</button>
+                            </div>
+                            <div class="output">
+                                <p class="border mt-3">👉
+                                    <span id="numberIntegerDisplay"></span>
+                                </p>
+                            </div>
+                            <div class="accordion-body">
+                                
+                                <button type="submit" id="btnCountInt">Đếm số nguyên</button>
+                            </div>
+                            <div class="output">
+                                <p class="border mt-3">👉
+                                    <span id="resultCountInt"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTen" aria-expanded="false"
+                            aria-controls="flush-collapseTen">
+                            #10: So sánh lượng số dương và số âm
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTen" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="accordion-body">
+                                <button type="submit" id="btnCompare">So sánh</button>
+                            </div>
+                            <div class="output">
+                                <p class="border mt-3">👉
+                                    <span id="compareResult"></span>
                                 </p>
                             </div>
                         </div>

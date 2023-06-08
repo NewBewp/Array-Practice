@@ -1,4 +1,4 @@
-var arrNumber = []
+var arrNumber = [] //khai báo mảng (array)
 
 function addToArray() {
     //đưa số vào mảng
@@ -84,8 +84,9 @@ function addToArray() {
     document.getElementById("btnSwap").onclick = swapPosition;
 
     // #7: Sắp xếp tăng dần
-    function sortUp() {        
-        for (var i = 0; i < arrNumber.length-1; i++) {
+    function sortUp() {
+
+        for (var i = 0; i < arrNumber.length - 1; i++) {
             for (var j = i + 1; j < arrNumber.length; j++) {
                 if (arrNumber[i] > arrNumber[j]) {
                     var temp = arrNumber[i];
@@ -95,10 +96,83 @@ function addToArray() {
             }
         }
         document.querySelector("#afterSort").innerHTML = arrNumber;
-
     }
     document.getElementById("btnSort").onclick = sortUp;
 
+    // #8: Tìm số nguyên tố
+    function findPrime() {
+        var arrPrime = []
+
+        for (var i = 0; i < arrNumber.length - 1; i++) {
+            var temp = 0;
+            for (var j = 2; j < Math.sqrt(arrNumber[i]); j++) {
+                if (arrNumber[i] % j == 0) {
+                    temp++;
+                    break;
+                }
+            }
+
+            if (temp == 0) {
+                arrPrime.push(arrNumber[i])
+            }
+        }
+
+        if (arrNumber.length > 0) {
+            document.getElementById("resultPrime").innerHTML = "Số nguyên tố đầu tiên: " + arrPrime[0];
+        } else {
+            document.getElementById("resultPrime").innerHTML = "Không có số nguyên tố";
+        }
+    }
+    document.getElementById("btnFindPrime").onclick = findPrime;
+
+    // #10: So sánh lượng số dương và số âm
+    function compareNumber() {
+        var positiveNum = 0;
+        var negativeNum = 0;
+        for (var i = 0; i < arrNumber.length; i++) {
+            if (arrNumber[i] >= 0) {
+                positiveNum++
+            } else {
+                negativeNum++
+            }
+        }
+
+        if (positiveNum > negativeNum) {
+            document.getElementById("compareResult").innerHTML = "số dương > số âm";
+        } else if (positiveNum < negativeNum) {
+            document.getElementById("compareResult").innerHTML = "số dương < số âm";
+        } else {
+            document.getElementById("compareResult").innerHTML = "số dương = số âm";
+        }
+    }
+    document.getElementById("btnCompare").onclick = compareNumber;
 
 }
 document.getElementById("addNum").onclick = addToArray;
+
+
+
+// #9: Đếm số nguyên
+var arrInteger = [];
+function putInteger() {
+
+
+    var integerInput = +document.getElementById("numberIntegerInput").value;
+    arrInteger.push(integerInput);
+
+    document.getElementById("numberIntegerDisplay").innerHTML = arrInteger;
+
+    function countInteger() {
+        var count = 0;
+
+        for (var i = 0; i < arrInteger.length; i++) {
+            if (Number.isInteger(arrInteger[i])) {
+                count++;
+            }
+        }
+        document.getElementById("resultCountInt").innerHTML = "Số lượng số nguyên: " + count;
+    }
+    document.getElementById("btnCountInt").onclick = countInteger;
+
+}
+document.getElementById("btnNumberInteger").onclick = putInteger;
