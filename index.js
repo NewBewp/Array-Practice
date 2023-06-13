@@ -101,20 +101,24 @@ function addToArray() {
 
     // #8: Tìm số nguyên tố
     function findPrime() {
-        var arrPrime = []
+        var arrPrime = [];
+        var temp = 0;
 
         for (var i = 0; i < arrNumber.length - 1; i++) {
-            var temp = 0;
-            for (var j = 2; j < Math.sqrt(arrNumber[i]); j++) {
-                if (arrNumber[i] % j == 0) {
-                    temp++;
-                    break;
+            // var value = arrNumber[i];
+            if (arrNumber[i] >1){
+                for (var j = 2; j < Math.sqrt(arrNumber[i]); j++) {
+                    if (arrNumber[i] % j === 0) {
+                        temp++;
+                        break;
+                    }
+                }
+    
+                if (temp == 0) {
+                    arrPrime.push(arrNumber[i])
                 }
             }
-
-            if (temp == 0) {
-                arrPrime.push(arrNumber[i])
-            }
+           
         }
 
         if (arrNumber.length > 0) {
@@ -124,6 +128,9 @@ function addToArray() {
         }
     }
     document.getElementById("btnFindPrime").onclick = findPrime;
+
+
+
 
     // #10: So sánh lượng số dương và số âm
     function compareNumber() {
@@ -149,8 +156,6 @@ function addToArray() {
 
 }
 document.getElementById("addNum").onclick = addToArray;
-
-
 
 // #9: Đếm số nguyên
 var arrInteger = [];
